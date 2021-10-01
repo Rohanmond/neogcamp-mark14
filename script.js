@@ -28,7 +28,7 @@ function showStockData(){
     var qty=Number(stocksQuantity.value);
     var curr=Number(currentPrice.value);
     var message=calculateProfitAndLoss(ip,qty,curr);
-    
+    if(ip<0|| qty<0||curr<0 ) message="Initial value or quantity or curr value can't be negative";
     outputBox.innerText=message;
 
 }
